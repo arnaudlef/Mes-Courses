@@ -1,0 +1,28 @@
+/mes-courses-api/src/main/resources/application.properties
+/mes-courses-api/target/*
+/mes-courses-api/.idea/*
+
+
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/mes-courses-app/dist
+/mes-courses-app/tmp
+/mes-courses-app/out-tsc
+/mes-courses-app/bazel-out
+
+# Node
+/mes-courses-app/node_modules
+/mes-courses-app/npm-debug.log
+
+# IDEs and editors
+/mes-courses-app/idea/
+/mes-courses-app/project
+/mes-courses-app/settings/
+
+# Visual Studio Code
+/mes-courses-app/vscode/*
+/mes-courses-app/history/*
+
+# Miscellaneous
+/mes-courses-app/.angular/cache
