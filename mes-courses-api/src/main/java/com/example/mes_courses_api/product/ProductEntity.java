@@ -1,14 +1,14 @@
-package com.example.mes_courses_api.shopping_product;
+package com.example.mes_courses_api.product;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "shopping_product")
+@Table(name = "product")
 @Getter
 @Setter
-public class ShoppingProductEntity {
+public class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
@@ -17,5 +17,5 @@ public class ShoppingProductEntity {
     String name;
 
     @Column()
-    Integer quantity;
+    String unit;
 }
