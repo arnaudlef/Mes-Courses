@@ -2,6 +2,7 @@ package com.example.mes_courses_api.list;
 
 import com.example.mes_courses_api.user.UserEntity;
 import jakarta.annotation.Resource;
+import org.apache.catalina.User;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,8 +22,8 @@ public class ListController {
     }
 
     @GetMapping
-    List<ListDTO> findAll() {
-        return listService.findAll();
+    List<ListDTO> findAll(@AuthenticationPrincipal UserEntity userEntity) {
+        return listService.findAll(userEntity);
     }
 
     @PatchMapping("{listId}")

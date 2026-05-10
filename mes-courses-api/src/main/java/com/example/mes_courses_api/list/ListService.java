@@ -22,14 +22,15 @@ public class ListService {
     ListMapper listMapper;
 
     public ListDTO find(UserEntity userEntity, Long listId) {
-        ListEntity list = listRepository.findById(listId)
-                .orElseThrow(() -> new RuntimeException());
-
+        ListEntity list = listRepository.findByIdAndUserId(listId, userEntity.getId())
+                .orElseThrow(() -> new IllegalArgumentException("Mauvaise liste"));
         return listMapper.toDto(list);
     }
 
-    List<ListDTO> findAll() {
-        return listMapper.toDtoList(listRepository.findAll());
+    List<ListDTO> findAll(UserEntity userEntity) {
+        List<ListEntity> lists = listRepository.findByUserId(userEntity.getId())
+                .orElseThrow(() -> new IllegalArgumentException("Mauvaise liste"));
+        return listMapper.toDtoList(lists);
     }
 
     ListDTO create(UserEntity userEntity, ListDTO listRequest) {

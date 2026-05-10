@@ -1,12 +1,14 @@
 package com.example.mes_courses_api.user;
 
 import com.example.mes_courses_api.list.ListEntity;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
@@ -32,7 +34,7 @@ public class UserEntity implements UserDetails {
     String role;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
-    Collection<ListEntity> lists;
+    Collection<ListEntity> lists = new ArrayList<>();
 
     @Column(name = "created_at", nullable = false)
     LocalDateTime createdAt;
