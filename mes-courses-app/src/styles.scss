@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import './variables.scss';
+
+@font-face {
+    font-family: 'Crimson';
+    src: url('assets/Crimson_Text/CrimsonText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Crimson-Bold';
+    src: url('assets/Crimson_Text/CrimsonText-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4 {
+    font-family: Crimson-Bold;
+    margin: 0;
+}
+
+span, p {
+    font-family: Crimson;
+}
+
+.vh-100 {
+    min-height: 100vh;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+input {
+    color: $primary-color;
+    background-color: $primary-background;
+    border: 1px solid;
+
+    &:focus {
+        box-shadow: 0 0 0 0.15rem $primary-dark-color;
+    }
+}
+
+.btn {
+    background-color: $primary-color;
+    color: $white;
+    background: linear-gradient(to right, $primary-color, $primary-darker-color);
+    transition: background .3s ease, transform .2s;
+
+    &:hover {
+        transform: scale(1.02);
+        color: $white;
+        background: linear-gradient(to right, $primary-dark-color, $primary-darker-color);
+        transform: scale(1.02);
+    }
+}

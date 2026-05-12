@@ -1,0 +1,44 @@
+@import '../../../../../variables.scss';
+
+.auth-container {
+    background-color: $white;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px -9px #000000;
+    color: $primary-dark-color;
+    width: 400px;
+
+    input {
+        color: $black;
+        background-color: $primary-background;
+        border: 1px solid $primary-color;
+
+        &:focus {
+            box-shadow: 0 0 0 0.1rem $primary-dark-color;
+        }
+    }
+
+    .logo-img {
+        background-color: $primary-background;
+        border-radius: 50%;
+        width: 100px;
+    }
+
+    .forgot-link {
+        cursor: pointer;
+        color: $primary-light-color;
+
+        &:hover {
+            color: $primary-dark-color;
+        }
+    }
+
+    .register-link {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-darker-color;
+            text-decoration: underline;
+        }
+    }
+}
