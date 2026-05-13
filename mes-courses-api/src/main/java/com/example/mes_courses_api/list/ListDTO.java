@@ -1,7 +1,6 @@
 package com.example.mes_courses_api.list;
 
 import com.example.mes_courses_api.list_item.ListItemInListDTO;
-import com.example.mes_courses_api.user.UserDTO;
 
 import java.util.List;
 

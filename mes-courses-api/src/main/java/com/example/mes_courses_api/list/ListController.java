@@ -2,11 +2,17 @@ package com.example.mes_courses_api.list;
 
 import com.example.mes_courses_api.user.UserEntity;
 import jakarta.annotation.Resource;
-import org.apache.catalina.User;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -22,8 +28,8 @@ public class ListController {
     }
 
     @GetMapping
-    List<ListDTO> findAll(@AuthenticationPrincipal UserEntity userEntity) {
-        return listService.findAll(userEntity);
+    List<ListDTO> findAll() {
+        return listService.findAll();
     }
 
     @PatchMapping("{listId}")

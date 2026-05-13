@@ -1,6 +1,5 @@
 package com.example.mes_courses_api.product;
 
-import com.example.mes_courses_api.list_item.ListItemDTO;
 import com.example.mes_courses_api.list_item.ListItemRepository;
 import jakarta.annotation.Resource;
 import org.springframework.stereotype.Service;

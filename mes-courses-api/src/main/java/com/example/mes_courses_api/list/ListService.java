@@ -27,11 +27,15 @@ public class ListService {
         return listMapper.toDto(list);
     }
 
-    List<ListDTO> findAll(UserEntity userEntity) {
-        List<ListEntity> lists = listRepository.findByUserId(userEntity.getId())
-                .orElseThrow(() -> new IllegalArgumentException("Mauvaise liste"));
-        return listMapper.toDtoList(lists);
+    List<ListDTO> findAll() {
+        return listMapper.toDtoList(listRepository.findAll());
     }
+
+//    List<ListDTO> findAll(UserEntity userEntity) {
+//        List<ListEntity> lists = listRepository.findByUserId(userEntity.getId())
+//                .orElseThrow(() -> new IllegalArgumentException("Mauvaise liste"));
+//        return listMapper.toDtoList(lists);
+//    }
 
     ListDTO create(UserEntity userEntity, ListDTO listRequest) {
         ListEntity listEntity = listMapper.toEntity(listRequest);

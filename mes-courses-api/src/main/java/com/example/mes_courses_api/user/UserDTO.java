@@ -1,6 +1,5 @@
 package com.example.mes_courses_api.user;
 
-import com.example.mes_courses_api.list.ListDTO;
 import com.example.mes_courses_api.list.ListInUserDTO;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

@@ -30,11 +30,11 @@ public class SecurityConfig {
                                 .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
                                 .requestMatchers(HttpMethod.POST, "/auth/refresh").permitAll()
-                                .requestMatchers(HttpMethod.GET, "/exercises/find-all-exercises-by-muscle-group-id/{muscleGroupId}").permitAll()
+                                .requestMatchers(HttpMethod.GET, "/api/lists").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/exercises/{exerciseId}").permitAll()
                                 .requestMatchers(HttpMethod.GET, "/muscle-group").permitAll()
                                 .requestMatchers("/error").permitAll()
-                                .anyRequest().authenticated())
+                                .anyRequest().permitAll())
                 .sessionManagement(session -> session
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )

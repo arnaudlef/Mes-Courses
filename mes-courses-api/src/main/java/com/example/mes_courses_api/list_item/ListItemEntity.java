@@ -5,8 +5,6 @@ import com.example.mes_courses_api.product.ProductEntity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.engine.internal.Cascade;
 
 @Entity
 @Table(
