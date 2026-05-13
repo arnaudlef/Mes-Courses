@@ -1,0 +1,29 @@
+@import '../../../../variables.scss';
+
+@media (max-width: 768px) {
+    .navbar {
+        .navbar-brand img {
+            width: 34px;
+            height: 34px;
+        }
+    }
+}
+
+.navbar {
+    height: 9vh;
+
+    .navbar-brand img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .container-fluid {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+
+    .navbar-toggler:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: $primary-dark-color 0 0 0 2px;
+    }
+}

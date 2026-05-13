@@ -35,6 +35,10 @@ span, p {
     color: $primary-color;
 }
 
+.background-white {
+    background-color: $white;
+}
+
 input {
     color: $primary-color;
     background-color: $primary-background;
@@ -56,5 +60,25 @@ input {
         color: $white;
         background: linear-gradient(to right, $primary-dark-color, $primary-darker-color);
         transform: scale(1.02);
+    }
+}
+
+.link {
+        color: $primary-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $primary-darker-color;
+            text-decoration: underline;
+        }
+}
+
+.current-link {
+    color: $primary-darker-color;
+    text-decoration: underline;
+
+    &:hover {
+        color: $primary-dark-color;
+        text-decoration: none;
     }
 }

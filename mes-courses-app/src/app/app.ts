@@ -1,14 +1,28 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit, signal } from '@angular/core';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
+import { Navbar } from "./core/layout/navbar/navbar";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Navbar],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements OnInit {
   protected readonly title = signal('mes-courses-app');
 
-  isOnAuth = true;
+  href: string = "";
+
+  constructor(
+    private router : Router
+  ) {}
+
+  ngOnInit(): void {
+    this.router.events
+      .subscribe(event => {
+        if (event instanceof NavigationEnd ) {
+          this.href = event.url;
+        }
+      })
+  }
 }
