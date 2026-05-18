@@ -1,5 +1,11 @@
 @import '../variables.scss';
 
+@media (max-width: 992px) {
+    .body {
+        height: 93vh;
+    }
+}
+
 .theme {
     background-color: $primary-background;
 }

@@ -1,14 +1,5 @@
 @import '../../../../variables.scss';
 
-@media (max-width: 768px) {
-    .navbar {
-        .navbar-brand img {
-            width: 34px;
-            height: 34px;
-        }
-    }
-}
-
 .navbar {
     height: 9vh;
 
@@ -18,6 +9,7 @@
     }
 
     .container-fluid {
+        min-height: 9vh;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
     }
 
@@ -25,5 +17,28 @@
         text-decoration: none;
         outline: 0;
         box-shadow: $primary-dark-color 0 0 0 2px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        height: 7vh;
+
+        .container-fluid {
+            min-height: 7vh;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        .navbar-brand img {
+            width: 34px;
+            height: 34px;
+        }
+
+        form {
+            width: 100%;
+        }
     }
 }
